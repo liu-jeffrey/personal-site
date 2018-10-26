@@ -1,0 +1,31 @@
+<template>
+  <div class="intro">
+    <h2 id="whoAmI">Hi, my name is <span style="color: #8B0000">Jeffrey</span>.
+      <br/>I love to develop and design.</h2>
+    
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Introduction"
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#whoAmI {
+  text-align: left;
+  font-size: 40px;
+  position: relative;
+  right: 30vh;
+}
+</style>
