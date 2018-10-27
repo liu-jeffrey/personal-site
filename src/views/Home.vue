@@ -1,16 +1,17 @@
 <template>
   <div class="home">
     <div class="nav">
-      <h1>JL</h1>
+      <a href="#intro" id=upperNav>JL</a>
       <div class="lowerNav">
-        <p>About</p>
-        <p>Experience</p>
+        <a href="#aboutMe">About</a>
+        <a href="#experience">Experience</a>
         <p>Projects</p>
         <p>Contact me</p>
         </div>
     </div>
-    <Introduction/>    
-    <AboutMe/>
+    <Introduction id="intro"/>
+    <AboutMe id="aboutMe"/>
+    <Experience id="experience"/>
   </div>
 </template>
 
@@ -18,12 +19,14 @@
 // @ is an alias to /src
 import Introduction from "@/components/Introduction.vue";
 import AboutMe from "@/components/AboutMe.vue";
+import Experience from "@/components/Experience.vue";
 
 export default {
   name: "home",
   components: {
     Introduction,
-    AboutMe
+    AboutMe,
+    Experience
   }
 };
 </script>
@@ -37,10 +40,12 @@ export default {
   display: flex;
   flex-direction: column;
 
-  h1 {
+  #upperNav {
     margin-top: 5vh;
     font-size: 40px;
+    font-weight: bold;
     color: #8b0000;
+    text-decoration: none;
   }
 
   .lowerNav {
@@ -51,6 +56,14 @@ export default {
     justify-content: flex-end;
 
     padding-bottom: 50px;
+
+    a,
+    a:link,
+    a:visited {
+      margin-bottom: 16px;
+      color: black;
+      text-decoration: none;
+    }
 
     p {
       margin-top: 0;
