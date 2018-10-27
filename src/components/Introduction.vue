@@ -1,14 +1,20 @@
 <template>
   <div class="intro">
-    <h2 id="whoAmI">Hi, my name is <span style="color: #8B0000">Jeffrey</span>.
-      <br/>I love to develop and design.</h2>
-    
+    <particles />
+    <h2 id="whoAmI">
+      Hi, my name is <span style="color: #8B0000">Jeffrey</span>.
+      <br/>
+      I love to develop and design.
+    </h2>
   </div>
 </template>
 
 <script>
+import Particles from "./Particles";
+
 export default {
-  name: "Introduction"
+  name: "Introduction",
+  components: { Particles }
 };
 </script>
 
@@ -22,10 +28,19 @@ export default {
   align-items: center;
 }
 
+// prettier-ignore
+.particles {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: 0;
+}
+
 #whoAmI {
-  text-align: left;
-  font-size: 40px;
   position: relative;
   right: 30vh;
+
+  text-align: left;
+  font-size: 40px;
+  font-weight: 500;
 }
 </style>
