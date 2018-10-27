@@ -9,7 +9,7 @@
         <p>Contact me</p>
         </div>
     </div>
-    <Introduction/>    
+    <Introduction/>
   </div>
 </template>
 
@@ -30,6 +30,7 @@ export default {
   position: fixed;
   left: 10vh;
   height: 100vh;
+  z-index: 1;
 
   display: flex;
   flex-direction: column;
