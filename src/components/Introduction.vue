@@ -6,6 +6,7 @@
       <br/>
       I love to develop and design.
     </h2>
+    <img src="../assets/logo.png" alt="hi"> 
   </div>
 </template>
 
@@ -23,7 +24,7 @@ export default {
 .intro {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -42,5 +43,10 @@ export default {
   text-align: left;
   font-size: 40px;
   font-weight: 500;
+}
+
+img {
+  position: relative;
+  left: 5vw;
 }
 </style>

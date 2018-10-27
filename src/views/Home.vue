@@ -9,18 +9,21 @@
         <p>Contact me</p>
         </div>
     </div>
-    <Introduction/>
+    <Introduction/>    
+    <AboutMe/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Introduction from "@/components/Introduction.vue";
+import AboutMe from "@/components/AboutMe.vue";
 
 export default {
   name: "home",
   components: {
-    Introduction
+    Introduction,
+    AboutMe
   }
 };
 </script>
