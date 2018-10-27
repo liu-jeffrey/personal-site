@@ -1,21 +1,20 @@
-# PersonalSite2
+# Personal Site
+
+_Live preview:_ https://jeffelini.github.io/personal-site
 
 ## Project setup
-```
-yarn install
+
+```bash
+yarn install  # installs dependencies
+yarn serve    # compiles and hot-reloads for development
+yarn build    # compiles and minifies for production
+yarn lint     # lints and fixes files
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## Github Pages
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+To publish to Github Pages, run:
 
-### Lints and fixes files
-```
-yarn run lint
+```bash
+yarn pages
 ```
