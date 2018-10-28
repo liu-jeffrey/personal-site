@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="nav">
-      <a href="#intro" id=upperNav>JL</a>
+      <a href="#intro" class="upperNav">JL</a>
       <div class="lowerNav">
         <a href="#aboutMe">About</a>
         <a href="#experience">Experience</a>
@@ -41,12 +41,18 @@ export default {
   display: flex;
   flex-direction: column;
 
-  #upperNav {
+  .upperNav {
     margin-top: 5vh;
     font-size: 40px;
     font-weight: bold;
-    color: #8b0000;
     text-decoration: none;
+
+    color: #8b0000;
+    transition: color 150ms ease-in-out;
+
+    &:hover {
+      color: #c04242;
+    }
   }
 
   .lowerNav {
@@ -62,8 +68,14 @@ export default {
     a:link,
     a:visited {
       margin-bottom: 16px;
-      color: black;
       text-decoration: none;
+
+      color: black;
+      transition: opacity 150ms ease-in-out;
+
+      &:hover {
+        opacity: 0.75;
+      }
     }
 
     p {
