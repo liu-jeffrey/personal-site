@@ -1,12 +1,12 @@
 <template>
   <div class="intro">
-    <particles />
+    <particles lineColor="#a54040" />
     <h2 id="whoAmI">
       Hi, my name is <span style="color: #8B0000">Jeffrey</span>.
       <br/>
       I love to develop and design.
     </h2>
-    <img src="../assets/logo.png" alt="hi"> 
+    <img src="../assets/logo.png" alt="hi">
   </div>
 </template>
 

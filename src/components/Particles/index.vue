@@ -8,9 +8,12 @@ import defaultConfig from "./config.json";
 
 export default {
   props: {
-    uniqID: { type: String, default: uuid },
+    uniqID: {
+      type: String,
+      default: () => `particles-${uuid()}`
+    },
     lineColor: String,
-    config: { type: Object, default: null }
+    config: Object
   },
   mounted: function() {
     const config = Object.assign(defaultConfig, this.config);
