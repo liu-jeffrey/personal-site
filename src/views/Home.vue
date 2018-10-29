@@ -1,16 +1,16 @@
 <template>
   <div class="home">
     <div class="nav">
-      <a href="#intro" class="upperNav">JL</a>
+      <a href="#intro" class="upperNav" @click.prevent="scrollToID('intro')">JL</a>
       <div class="lowerNav">
-        <a href="#aboutMe">About</a>
-        <a href="#experience">Experience</a>
+        <a href="#about-me" @click.prevent="scrollToID('about-me')">About</a>
+        <a href="#experience" @click.prevent="scrollToID('experience')">Experience</a>
         <p>Projects</p>
         <p>Contact me</p>
         </div>
     </div>
     <Introduction id="intro"/>
-    <AboutMe id="aboutMe"/>
+    <AboutMe id="about-me"/>
     <Experience id="experience"/>
   </div>
 </template>
@@ -23,6 +23,12 @@ import Experience from "@/components/Experience.vue";
 
 export default {
   name: "home",
+  methods: {
+    scrollToID: function(id) {
+      const elem = document.getElementById(id);
+      elem.scrollIntoView({ behavior: "smooth" });
+    }
+  },
   components: {
     Introduction,
     AboutMe,
@@ -35,8 +41,10 @@ export default {
 .nav {
   position: fixed;
   left: 10vh;
-  height: 100vh;
-  z-index: 1;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  backface-visibility: hidden;
 
   display: flex;
   flex-direction: column;

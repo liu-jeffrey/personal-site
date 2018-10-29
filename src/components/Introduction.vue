@@ -5,6 +5,8 @@
       Hi, my name is <span style="color: #8B0000">Jeffrey</span>.
       <br/>
       I love to develop and design.
+      <br/>
+      <span style="font-size: 20px">This site is still a work in progress.</span>
     </h2>
     <img src="../assets/logo.png" alt="hi">
   </div>
@@ -32,13 +34,13 @@ export default {
 // prettier-ignore
 .particles {
   position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
+  left: 100px; right: 100px; top: 100px; bottom: 100px;
   z-index: 0;
 }
 
 #whoAmI {
   position: relative;
-  right: 30vh;
+  // right: 30vh;
 
   text-align: left;
   font-size: 40px;
@@ -47,6 +49,6 @@ export default {
 
 img {
   position: relative;
-  left: 5vw;
+  // left: 5vw;
 }
 </style>
