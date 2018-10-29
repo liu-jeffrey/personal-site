@@ -1,27 +1,65 @@
 <template>
   <div class="experience">
+    <div
+      class="modal" :class="{ visible: modalVisible }"
+      @click="hideModal"
+      ref="modal"
+    >
+      <div class="card">
+        <h2>{{ cardTitle }}</h2>
+        <p>{{ cardBody }}</p>
+      </div>
+    </div>
     <img
       src="../assets/stuco-logo.png"
-      height="250"
-      width="250"
-      id="stuco"
+      height="250" width="250" id="stuco"
+      @click="showModal('stuco')"
     >
-    <!-- <div class="popover stuco" :class="{ visible: focused === 'stuco' }">
-      Hey what's up guys it's Scarce here.
-    </div> -->
-    <img src="../assets/fgf-logo.png" height="250" width="250" id="fgf">
-    <img src="../assets/h4h-logo.png" height="250" width="250" id="h4h">
-  </div>
+    <img
+      src="../assets/fgf-logo.png"
+      height="250" width="250" id="fgf"
+      @click="showModal('fgf')"
+    >
+    <img
+      src="../assets/h4h-logo.png"
+      height="250" width="250" id="h4h"
+      @click="showModal('h4h')"
+    >
+    </div>
 </template>
 
 <script>
 export default {
-  // name: "Experience",
-  // data: function() {
-  //   return {
-  //     focused: undefined
-  //   };
-  // }
+  name: "Experience",
+  data: function() {
+    return {
+      modalVisible: false,
+      cardTitle: "",
+      cardBody: ""
+    };
+  },
+  methods: {
+    showModal: function(name) {
+      switch (name) {
+        case "stuco":
+          this.cardTitle = "Stuco";
+          break;
+        case "fgf":
+          this.cardTitle = "FGF";
+          break;
+        case "h4h":
+          this.cardTitle = "Habitat For Humanity";
+          break;
+      }
+
+      this.modalVisible = true;
+    },
+    hideModal: function(event) {
+      if (event.toElement === this.$refs.modal) {
+        this.modalVisible = false;
+      }
+    }
+  }
 };
 </script>
 
@@ -58,7 +96,36 @@ img {
   filter: drop-shadow(2px 4px 5px grey) drop-shadow(-2px 4px 5px grey);
 }
 
-.popover {
-  display: none;
+.modal {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  transition: all 250ms ease-in-out;
+
+  &.visible {
+    visibility: visible;
+    background-color: rgba(95, 95, 95, 0.527);
+    cursor: pointer;
+  }
+
+  .card {
+    height: 500px;
+    width: 500px;
+    border-radius: 15px;
+    background-color: white;
+
+    padding: 15px;
+    cursor: default;
+  }
 }
 </style>
