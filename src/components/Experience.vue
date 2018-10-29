@@ -6,8 +6,10 @@
       ref="modal"
     >
       <div class="card">
-        <h2>{{ cardTitle }}</h2>
-        <p>{{ cardBody }}</p>
+        <div class="content">
+          <h2>{{ cardTitle }}</h2>
+          <p>{{ cardBody }}</p>
+        </div>
       </div>
     </div>
     <img
@@ -112,20 +114,51 @@ img {
 
   transition: all 250ms ease-in-out;
 
-  &.visible {
-    visibility: visible;
-    background-color: rgba(95, 95, 95, 0.527);
-    cursor: pointer;
-  }
-
   .card {
-    height: 500px;
+    height: 0px;
     width: 500px;
     border-radius: 15px;
     background-color: white;
 
     padding: 15px;
     cursor: default;
+
+    opacity: 0;
+    transition: all 350ms ease-in-out;
+
+    .content {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 200ms 250ms ease-in-out;
+    }
+  }
+
+  &.visible {
+    visibility: visible;
+    background-color: rgba(95, 95, 95, 0.527);
+    cursor: pointer;
+
+    .card {
+      opacity: 1;
+      height: 500px;
+
+      .content {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  // prettier-ignore
+  &:not(.visible) {
+    transition-delay: 200ms;
+
+    .card {
+      transition-delay: 100ms;
+
+      // prettier-ignore
+      .content { transition-delay: 0s; }
+    }
   }
 }
 </style>
