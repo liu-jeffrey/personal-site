@@ -42,13 +42,13 @@ export default {
     showModal: function(name) {
       switch (name) {
         case "stuco":
-          this.cardTitle = "Stuco";
+          this.cardTitle = "St.Robert CHS Student Council";
           break;
         case "fgf":
-          this.cardTitle = "FGF";
+          this.cardTitle = "FGF Brands";
           break;
         case "h4h":
-          this.cardTitle = "Habitat For Humanity";
+          this.cardTitle = "Habitat For Humanity - UW Campus Chapter";
           break;
       }
 
