@@ -5,8 +5,8 @@
       <div class="lowerNav">
         <a href="#about-me" @click.prevent="scrollToID('about-me')">About</a>
         <a href="#experience" @click.prevent="scrollToID('experience')">Experience</a>
-        <p>Projects</p>
-        <p>Contact me</p>
+        <p>Projects(WIP)</p>
+        <p>Contact me(WIP)</p>
         </div>
     </div>
     <Introduction id="intro"/>

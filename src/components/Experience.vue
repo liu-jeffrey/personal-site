@@ -1,17 +1,25 @@
 <template>
+
+  <!-- popup -->
   <div class="experience">
     <div
       class="modal" :class="{ visible: modalVisible }"
       @click="hideModal"
       ref="modal"
     >
+
+    <!-- popup content -->
       <div class="card">
         <div class="content">
           <h2>{{ cardTitle }}</h2>
+          <h3>{{ cardPosition }}</h3>
+          <h4>{{ cardDate }}</h4>
           <p>{{ cardBody }}</p>
         </div>
       </div>
     </div>
+
+    <!-- visuals of experiences -->
     <img
       src="../assets/stuco-logo.png"
       height="250" width="250" id="stuco"
@@ -37,6 +45,8 @@ export default {
     return {
       modalVisible: false,
       cardTitle: "",
+      cardPosition: "",
+      cardDate: "",
       cardBody: ""
     };
   },
@@ -45,12 +55,28 @@ export default {
       switch (name) {
         case "stuco":
           this.cardTitle = "St.Robert CHS Student Council";
+          this.cardPosition = "Vice President";
+          this.cardDate = "September 2016 to June 2017";
+          this.cardBody =
+            "Voted by the entire high school student body to be the Student " +
+            "Council Vice President." +
+            "As the Vice President, I was in charge of managing the overall " +
+            "council, directing and motivating the team to plan events for " +
+            "students.\nIn addition, I was in charge of managing the " +
+            "Marketing team as well as council inventory.\n\n" +
+            "Noticeable achievements accomplished by the council:\n" +
+            "• Organized over 30+ events for the student body including " +
+            " the school Semi Formal\n" +
+            "• Raised over 3000+ pairs of socks for homeless people";
           break;
         case "fgf":
           this.cardTitle = "FGF Brands";
+          this.cardPosition = "Content Data Management Specialist";
           break;
         case "h4h":
           this.cardTitle = "Habitat For Humanity - UW Campus Chapter";
+          this.cardPosition = "Web Developer";
+          this.cardBody = "Created and maintained ";
           break;
       }
 
@@ -130,6 +156,10 @@ img {
       opacity: 0;
       visibility: hidden;
       transition: all 200ms 250ms ease-in-out;
+
+      p {
+        white-space: pre-wrap;
+      }
     }
   }
 

@@ -6,7 +6,7 @@
       <br/>
       I love to develop and design.
       <br/>
-      <span style="font-size: 20px">This site is still a work in progress.</span>
+      <span style="font-size: 20px">This site is still a work in progress(WIP).</span>
     </h2>
     <img src="../assets/logo.png" alt="hi">
   </div>
