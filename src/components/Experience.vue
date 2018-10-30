@@ -63,22 +63,33 @@ export default {
             "As the Vice President, I was in charge of managing the overall " +
             "council, directing and motivating the team to plan events for " +
             "students.\nIn addition, I was in charge of managing the " +
-            "Marketing team as well as council inventory.\n\n" +
-            "Noticeable achievements accomplished by the council:\n" +
-            "• Organized over 30+ events for the student body including " +
-            " the school Semi Formal\n" +
-            "• Raised over 3000+ pairs of socks for homeless people";
+            "Marketing team as well as council inventory.\n\n";
+          // "Noticeable achievements accomplished by the council:\n" +
+          // "• Organized over 30+ events for the student body including " +
+          // "the school Semi Formal\n" +
+          // "• Raised over 3000+ pairs of socks for homeless people";
           break;
         case "fgf":
           this.cardTitle = "FGF Brands";
           this.cardPosition = "Content Data Management Specialist";
           this.cardDate = "May 2018 to August 2018";
-          this.cardBody = "";
+          this.cardBody =
+            "As Content Data Management Specialist co-op, I assisted in the " +
+            "company-wide transition from our legacy ERP software to " +
+            "SAP S/4HANA. This involved creating SQL queries used for ETLs " +
+            "as well as creating training documentations which were used " +
+            "company-wide. In addition, I also created SharePoint team " +
+            "using HTML/CSS and JavaScript.";
           break;
         case "h4h":
           this.cardTitle = "Habitat For Humanity - UW Campus Chapter";
           this.cardPosition = "Web Developer";
-          this.cardBody = "Created and maintained ";
+          this.cardDate = "September 2018 to PRESENT";
+          this.cardBody =
+            "Created and maintained the Habitats for Humanity " +
+            "website for the H4H UW Campus Chapter using React, HTML, and CSS." +
+            "\n\nCheck out our site: " +
+            "http://www.uofwhabitat.clubs.feds.ca/index.html";
           break;
       }
 
@@ -172,7 +183,7 @@ img {
 
     .card {
       opacity: 1;
-      height: 500px;
+      height: 400px;
 
       .content {
         visibility: visible;
