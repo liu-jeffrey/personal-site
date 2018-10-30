@@ -5,13 +5,16 @@
       <div class="lowerNav">
         <a href="#about-me" @click.prevent="scrollToID('about-me')">About</a>
         <a href="#experience" @click.prevent="scrollToID('experience')">Experience</a>
-        <p>Projects(WIP)</p>
-        <p>Contact me(WIP)</p>
+        <a href="#projects" @click.prevent="scrollToID('projects')">Projects(WIP)</a>
+        <a href="#contact-me" @click.prevent="scrollToID('contact-me')">Contact me(WIP)</a>
+        <!-- <p>Contact me(WIP)</p> -->
         </div>
     </div>
     <Introduction id="intro"/>
     <AboutMe id="about-me"/>
     <Experience id="experience"/>
+    <Projects id="projects"/>
+    <ContactMe id="contact-me"/>
   </div>
 </template>
 
@@ -20,6 +23,8 @@
 import Introduction from "@/components/Introduction.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import Experience from "@/components/Experience.vue";
+import Projects from "@/components/Projects.vue";
+import ContactMe from "@/components/ContactMe.vue";
 
 export default {
   name: "home",
@@ -32,7 +37,9 @@ export default {
   components: {
     Introduction,
     AboutMe,
-    Experience
+    Experience,
+    Projects,
+    ContactMe
   }
 };
 </script>
