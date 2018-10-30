@@ -72,6 +72,8 @@ export default {
         case "fgf":
           this.cardTitle = "FGF Brands";
           this.cardPosition = "Content Data Management Specialist";
+          this.cardDate = "May 2018 to August 2018";
+          this.cardBody = "";
           break;
         case "h4h":
           this.cardTitle = "Habitat For Humanity - UW Campus Chapter";
