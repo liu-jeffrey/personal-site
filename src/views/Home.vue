@@ -4,15 +4,14 @@
       <a href="#intro" class="upperNav" @click.prevent="scrollToID('intro')">JL</a>
       <div class="lowerNav">
         <a href="#about-me" @click.prevent="scrollToID('about-me')">About</a>
-        <a href="#experience" @click.prevent="scrollToID('experience')">Experience</a>
+        <!-- <a href="#experience" @click.prevent="scrollToID('experience')">Experience</a> -->
         <a href="#projects" @click.prevent="scrollToID('projects')">Projects(WIP)</a>
         <a href="#contact-me" @click.prevent="scrollToID('contact-me')">Contact me(WIP)</a>
-        <!-- <p>Contact me(WIP)</p> -->
-        </div>
+      </div>
     </div>
     <Introduction id="intro"/>
     <AboutMe id="about-me"/>
-    <Experience id="experience"/>
+    <!-- <Experience id="experience"/> -->
     <Projects id="projects"/>
     <ContactMe id="contact-me"/>
   </div>
@@ -33,6 +32,27 @@ export default {
       const elem = document.getElementById(id);
       elem.scrollIntoView({ behavior: "smooth" });
     }
+    // changeClass: function(curr_id, next_id) {
+    //   const curr_id_elem = document.getElementById(curr_id);
+    //   const next_id_elem = document.getElementById(next_id);
+    //   var initialTopOffset = curr_id_elem.offsetTop;
+
+    //   window.scroll(function(event) {
+    //     var scroll = window.scrollTop();
+    //     // if the top of our browser is inside the section2
+    //     if (
+    //       scroll + initialTopOffset >= next_id_elem.offsetTop &&
+    //       scroll + initialTopOffset <=
+    //         next_id_elem.offsetTop + next_id_elem.outerHeight
+    //     ) {
+    //       curr_id_elem.addClass("current"); // add the class
+    //     } else {
+    //       curr_id_elem.removeClass("current"); // remove the class
+    //     }
+    //   });
+
+    //   window.scroll();
+    // }
   },
   components: {
     Introduction,
@@ -72,7 +92,7 @@ export default {
 
   .lowerNav {
     flex: 1;
-
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -91,10 +111,19 @@ export default {
       &:hover {
         opacity: 0.75;
       }
+
+      &:active {
+        font-weight: bold;
+      }
     }
 
     p {
       margin-top: 0;
+    }
+
+    .current {
+      font-weight: bold;
+      color: #8b0000;
     }
   }
 }

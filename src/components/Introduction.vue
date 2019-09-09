@@ -1,14 +1,15 @@
 <template>
   <div class="intro">
-    <particles lineColor="#a54040" />
+    <particles lineColor="#a54040"/>
     <h2 id="whoAmI">
-      Hi, my name is <span style="color: #8B0000">Jeffrey</span>.
-      <br/>
-      I love to develop and design.
-      <br/>
+      Hi, my name is
+      <span style="color: #8B0000">Jeffrey</span>.
+      <br>Let's learn something new.
+      <br>
       <span style="font-size: 20px">This site is still a work in progress(WIP).</span>
     </h2>
-    <img src="../assets/logo.png" alt="hi">
+    <!-- <img src="../assets/me2.jpg" alt="hi" height="250"> -->
+    <!-- <img src="../assets/logo.png" alt="hi"> -->
   </div>
 </template>
 
@@ -47,8 +48,12 @@ export default {
   font-weight: 500;
 }
 
-img {
-  position: relative;
-  // left: 5vw;
-}
+// img {
+//   position: relative;
+//   border-radius: 50%;
+//   border: solid;
+//   border-color: rgba(169, 169, 169, 0.459);
+//   border-width: 5px;
+//   left: 3vw;
+// }
 </style>
