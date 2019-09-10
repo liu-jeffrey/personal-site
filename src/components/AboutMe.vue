@@ -1,18 +1,19 @@
 <template>
-  <div class="aboutMe">
-    <h1 style="color: #8B0000">About Me</h1>
+  <div class="biggerContent">
     <div class="content">
-      <img src="../assets/me2.jpg" height="250">
-      <p>Heyo! I'm a third year Computer Science and
-        <br>Business Administration Double Degree
-        <br>student attending the University of Waterloo
-        <br>and Wilfrid Laurier University.
-        <br>
-        <br>I am interested in software and web development.
-        <br>In my free time I enjoy connecting with friends,
-        <br>and going to the gym so I can drink more bubble tea.
-      </p>
+      <img src="../assets/me2.jpg" />
+      <div class="aboutMe">
+        <h1 style="color: #8B0000">Getting to know me.</h1>
+        <p>
+          I'm an aspiring developer, studying Computer Science and
+          Business Administration Double Degree student at the University of
+          Waterloo and Wilfrid Laurier University. Outside of school, I enjoy
+          connecting with friends, listening to Jazz and Korean R&B, and
+          drinking unhealthy amounts of bubble tea.
+        </p>
+      </div>
     </div>
+    <a href="google.com" id="resume">Resume</a>
   </div>
 </template>
 
@@ -23,12 +24,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.biggerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
 .aboutMe {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  margin-left: 5vw;
+  width: 40vw;
 }
 
 .content {
@@ -39,18 +48,32 @@ export default {
 }
 
 p {
-  font-size: 25px;
+  font-size: 1.4em;
   text-align: left;
-  margin-left: 5vw;
+  margin: 0;
+}
+
+#resume {
+  border: 0.4vh solid #c04242;
+  border-radius: 5px;
+  margin: 4vh;
+  padding: 1vh 4vh;
+  font-family: "montserrat";
+  text-decoration: none;
+  color: #c04242;
+  font-weight: 700;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 img {
   position: relative;
   border-radius: 50%;
   border: solid;
-  // border-color: rgba(169, 169, 169, 0.459);
   border-color: #c04242;
-  border-width: 5px;
-  // left: 3vw;
+  border-width: 0.6vh;
+  height: 30vh;
 }
 </style>
