@@ -8,12 +8,12 @@
           I'm an aspiring developer, studying Computer Science and
           Business Administration Double Degree student at the University of
           Waterloo and Wilfrid Laurier University. Outside of school, I enjoy
-          connecting with friends, listening to Jazz and Korean R&B, and
+          connecting with friends, listening to Jazz and R&B, and
           drinking unhealthy amounts of bubble tea.
         </p>
       </div>
     </div>
-    <a href="google.com" id="resume">Resume</a>
+    <a href="2019_08_26.pdf" target="_blank" id="resume">Resume</a>
   </div>
 </template>
 
