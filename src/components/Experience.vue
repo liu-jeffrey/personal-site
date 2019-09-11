@@ -1,14 +1,8 @@
 <template>
-
   <!-- popup -->
   <div class="experience">
-    <div
-      class="modal" :class="{ visible: modalVisible }"
-      @click="hideModal"
-      ref="modal"
-    >
-
-    <!-- popup content -->
+    <div class="modal" :class="{ visible: modalVisible }" @click="hideModal" ref="modal">
+      <!-- popup content -->
       <div class="card">
         <div class="content">
           <h2>{{ cardTitle }}</h2>
@@ -22,20 +16,14 @@
     <!-- visuals of experiences -->
     <img
       src="../assets/stuco-logo.png"
-      height="250" width="250" id="stuco"
+      height="250"
+      width="250"
+      id="stuco"
       @click="showModal('stuco')"
-    >
-    <img
-      src="../assets/fgf-logo.png"
-      height="250" width="250" id="fgf"
-      @click="showModal('fgf')"
-    >
-    <img
-      src="../assets/h4h-logo.png"
-      height="250" width="250" id="h4h"
-      @click="showModal('h4h')"
-    >
-    </div>
+    />
+    <img src="../assets/fgf-logo.png" height="250" width="250" id="fgf" @click="showModal('fgf')" />
+    <img src="../assets/h4h-logo.png" height="250" width="250" id="h4h" @click="showModal('h4h')" />
+  </div>
 </template>
 
 <script>
