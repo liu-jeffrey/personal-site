@@ -24,6 +24,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10vh;
 
   p {
     text-align: center;
@@ -40,6 +41,8 @@
 
 a {
   margin: 0 3vh;
+
+  transition: opacity 200ms ease-in-out;
 
   &:hover {
     opacity: 0.7;

@@ -29,7 +29,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
 }
 .aboutMe {
   display: flex;
@@ -62,6 +62,8 @@ p {
   text-decoration: none;
   color: #c04242;
   font-weight: 700;
+
+  transition: opacity 200ms ease-in-out;
 
   &:hover {
     opacity: 0.7;
