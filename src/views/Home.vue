@@ -6,14 +6,14 @@
         <a href="#about-me" @click.prevent="scrollToID('about-me')">About</a>
         <!-- <a href="#experience" @click.prevent="scrollToID('experience')">Experience</a> -->
         <a href="#projects" @click.prevent="scrollToID('projects')">Projects(WIP)</a>
-        <a href="#contact-me" @click.prevent="scrollToID('contact-me')">Contact me(WIP)</a>
+        <a href="#contact-me" @click.prevent="scrollToID('contact-me')">Contact me</a>
       </div>
     </div>
-    <Introduction id="intro"/>
-    <AboutMe id="about-me"/>
+    <Introduction id="intro" />
+    <AboutMe id="about-me" />
     <!-- <Experience id="experience"/> -->
-    <Projects id="projects"/>
-    <ContactMe id="contact-me"/>
+    <Projects id="projects" />
+    <ContactMe id="contact-me" />
   </div>
 </template>
 
