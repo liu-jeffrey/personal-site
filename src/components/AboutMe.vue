@@ -13,7 +13,7 @@
         </p>
       </div>
     </div>
-    <a href="2019_08_26.pdf" target="_blank" id="resume">Resume</a>
+    <a href="2019_11_15.pdf" target="_blank" id="resume">Resume</a>
   </div>
 </template>
 
